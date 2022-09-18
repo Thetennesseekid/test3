@@ -15,7 +15,7 @@ stages {
 	steps {
 			echo "======Start building imnage======"
 			dir('test2/src') {
-				sh 'docker build .'
+				bat 'dockerbuild.bat .'
 			}
 			}
 		}
