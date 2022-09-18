@@ -11,7 +11,7 @@ stages {
 		script {
 			echo "======Start building imnage======"
 			dir('test3/src/test_1/src') {
-				getRuntime().exec("cmd /c "dockerbuild.bat" .)
+				cmd "dockerbuild.bat" .)
 				}	
 				}
 			}
