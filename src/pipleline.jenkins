@@ -3,9 +3,9 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-	agent{
-		label 'master'
-	}
+	// agent {
+	// 	label 'master'
+	// }
 
 stages {
 	stage("create docker image") {
