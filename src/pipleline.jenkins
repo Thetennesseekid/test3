@@ -11,14 +11,17 @@ pipeline {
 			echo "======Start building imnage======"
 				bat(script: "cd src/src1 && dir && docker build . -t test ")
 				bat(script: "cd src/src2 && dir && docker build . -t test2 ")
+			}
+		}
+
+
 		stage('test docker image') {
 		steps {
 			echo "======Start running imnage======"
 					bat(script: "cd src/src1 && docker run . test")
 					bat(script: "cd src/src2 && docker run . test2")
 
-					}
-				}
+				
 			}
 		}
 	}
