@@ -1,4 +1,4 @@
 echo
-docker build . -t test
-docker run -it test
+docker build . -t test2
+docker run test2
 
