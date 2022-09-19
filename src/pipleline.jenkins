@@ -16,8 +16,8 @@ pipeline {
 		stage('test docker image') {
 		steps {
 			echo "======Start running imnage======"
-					bat(script: "cd src/src1 && docker run . test")
-					bat(script: "cd src/src2 && docker run . test2")
+					bat(script: "cd src/src1 && docker run test")
+					bat(script: "cd src/src2 && docker run test2")
 
 				
 			}
