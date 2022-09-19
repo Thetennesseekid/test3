@@ -9,7 +9,7 @@ pipeline {
 		stage("create docker image") {
 		steps {
 			echo "======Start building imnage======"
-				cd('test/src/test1/src') {
+				dir('test/src/test1/src') {
 					bat 'docker build . '
 				}
 			}
