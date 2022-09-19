@@ -10,7 +10,7 @@ stages {
 	steps {
 		script {
 			echo "======Start building imnage======"
-			CD('test3/src/test_1/src') {
+			dir('test3/src/test_1/src') {
 			bat (script: "docker build . test")
 				}	
 				}
