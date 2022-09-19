@@ -13,8 +13,6 @@ pipeline {
 				bat(script: "cd src/src2 && dir && docker build . -t test2 ")
 			}
 		}
-
-
 		stage('test docker image') {
 		steps {
 			echo "======Start running imnage======"
