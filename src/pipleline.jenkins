@@ -11,7 +11,7 @@ stages {
 		script {
 			echo "======Start building imnage======"
 			dir('test1/src') {
-			bat 'script: "docker build . test"'
+			bat 'script: docker build . test'
 				}	
 				}
 			}
