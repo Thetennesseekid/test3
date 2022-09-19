@@ -10,7 +10,7 @@ pipeline {
 		steps {
 			echo "======Start building imnage======"
 				// dir('test3/src/src1') {
-					bat 'cd test1/src && docker build . '
+					bat 'cd test1/src/src1 && docker build . '
 				// }
 			}
 		}
