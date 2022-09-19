@@ -17,6 +17,7 @@ pipeline {
 					bat(script: "cd src/src1 && docker run . test")
 					bat(script: "cd src/src2 && docker run . test2")
 
+					}
 				}
 			}
 		}
