@@ -6,18 +6,24 @@ pipeline {
 	agent any
 
 	stages {
+		stage('clon git') {
+		steps {
+			echo "======Start clone file======"
+				bat(script: "cd src/src1 &&  git clone https://github.com/Thetennesseekid/test3.git")
+						}
+		}
 		stage('create docker image') {
 		steps {
 			echo "======Start building imnage======"
-				bat(script: "cd src/src1 && dir && docker build . -t test ")
-				bat(script: "cd src/src2 && dir && docker build . -t test2 ")
+				bat(script: "cd src/src1 && docker build . -t test ")
+				bat(script: "cd src/src2 && docker build . -t test2 ")
 			}
 		}
 		stage('test docker image') {
 		steps {
 			echo "======Start running imnage======"
-					bat(script: "cd src/src1 && docker run . test")
-					bat(script: "cd src/src2 && docker run . test2")
+					bat(script: "cd src/src1 && docker run test")
+					bat(script: "cd src/src2 && docker run test2")
 
 				
 			}
