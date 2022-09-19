@@ -9,9 +9,9 @@ pipeline {
 		stage("create docker image") {
 		steps {
 			echo "======Start building imnage======"
-// 				dir('test3/src/src1') {
+				dir('test3/src/src1') {
 					bat(script: "cd "C:\Users\p.tulkin\Desktop\test\test1\src" && docker build . -t test")
-// 				}
+				}
 			}
 		}
 	}
