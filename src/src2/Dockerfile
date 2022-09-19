@@ -9,7 +9,7 @@ RUN apt-get update && \
     cmake -y &&\
     apt-get install qtbase5-dev  -y && \
     apt-get install qtdeclarative5-dev -y && \
-    cmake /usr/src/cpp_test2 &&\
+    cmake . &&\
     cmake --build .
 
 
